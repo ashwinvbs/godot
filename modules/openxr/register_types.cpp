@@ -147,6 +147,10 @@ void initialize_openxr_module(ModuleInitializationLevel p_level) {
 #endif
 		GDREGISTER_CLASS(OpenXRAndroidThreadSettingsExtension);
 
+		GDREGISTER_VIRTUAL_CLASS(OpenXRSpatialCapabilityConfigurationBaseHeader);
+		GDREGISTER_VIRTUAL_CLASS(OpenXRSpatialComponentData);
+		GDREGISTER_VIRTUAL_CLASS(OpenXRSpatialEntityTracker);
+
 		// Note, we're not registering all wrapper classes here, there is no point in exposing them
 		// if there isn't specific logic to expose.
 	}
@@ -307,14 +311,12 @@ void initialize_openxr_module(ModuleInitializationLevel p_level) {
 #endif
 
 		GDREGISTER_CLASS(OpenXRSpatialEntityExtension);
-		GDREGISTER_VIRTUAL_CLASS(OpenXRSpatialEntityTracker);
 		GDREGISTER_CLASS(OpenXRAnchorTracker);
 		GDREGISTER_CLASS(OpenXRPlaneTracker);
 		GDREGISTER_CLASS(OpenXRMarkerTracker);
 
 		GDREGISTER_VIRTUAL_CLASS(OpenXRStructureBase);
 
-		GDREGISTER_VIRTUAL_CLASS(OpenXRSpatialCapabilityConfigurationBaseHeader);
 		GDREGISTER_CLASS(OpenXRSpatialCapabilityConfigurationAnchor);
 		GDREGISTER_CLASS(OpenXRSpatialCapabilityConfigurationQrCode);
 		GDREGISTER_CLASS(OpenXRSpatialCapabilityConfigurationMicroQrCode);
@@ -322,7 +324,6 @@ void initialize_openxr_module(ModuleInitializationLevel p_level) {
 		GDREGISTER_CLASS(OpenXRSpatialCapabilityConfigurationAprilTag);
 		GDREGISTER_CLASS(OpenXRSpatialContextPersistenceConfig);
 		GDREGISTER_CLASS(OpenXRSpatialCapabilityConfigurationPlaneTracking);
-		GDREGISTER_VIRTUAL_CLASS(OpenXRSpatialComponentData);
 		GDREGISTER_CLASS(OpenXRSpatialComponentBounded2DList);
 		GDREGISTER_CLASS(OpenXRSpatialComponentBounded3DList);
 		GDREGISTER_CLASS(OpenXRSpatialComponentParentList);
